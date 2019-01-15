@@ -1,13 +1,14 @@
 import os
 from setuptools import setup, find_packages
 
-with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme_file:
-    readme = readme_file.read()
+with open(os.path.join(os.path.dirname(__file__), 'README.md')) as fh:
+    readme = fh.read()
 
 setup(
     name='django-encore',
     description='Django integration with Webpack Encore',
     long_description=readme,
+    long_description_content_type="text/markdown",
     license='MIT',
     version='0.0.1',
     url='https://github.com/egorsmkv/django-encore',
@@ -17,8 +18,7 @@ setup(
     },
     author='Yehor Smoliakov',
     author_email='yehors@ukr.net',
-    packages=find_packages(include=['encore', 'encore.templatetags']),
-    include_package_data=True,
+    packages=find_packages(),
     install_requires=[
         'Django>=2.1.5',
     ],

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Yehor Smoliakov">
+
+    <title>Django Encore</title>
+
+    {% load encore %}
+
+    {% block stylesheets %}
+        {% encore_entry_link_tags 'app' %}
+    {% endblock %}
+
+</head>
+<body>
+
+<div class="container">
+    {% block body %}
+        Body block.
+    {% endblock %}
+</div>
+
+{% block javascripts %}
+    {% encore_entry_script_tags 'app' %}
+{% endblock %}
+
+</body>
+</html>

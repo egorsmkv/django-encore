@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+{% load encore %}
+
+{% block stylesheets %}
+    {{ block.super }}
+
+    {% encore_entry_link_tags 'demo1' %}
+{% endblock %}
+
+{% block javascripts %}
+    {{ block.super }}
+
+    {% encore_entry_script_tags 'demo1' %}
+{% endblock %}
+
+{% block body %}
+
+    <h1>
+        Django Encore
+    </h1>
+
+    <hr>
+
+    {% encore_entry_js_files as js_files %}
+    {% encore_entry_css_files as css_files %}
+
+    JS files for the <strong>app</strong> entry:  <br><br>
+
+    <ul>
+    {% for file in js_files %}
+        <li>{{ file }}</li>
+    {% endfor %}
+    </ul>
+
+
+    CSS files for the <strong>app</strong> entry: <br><br>
+
+    <ul>
+    {% for file in css_files %}
+        <li>{{ file }}</li>
+    {% endfor %}
+    </ul>
+
+    <hr>
+
+    JS files for the <strong>demo1</strong> entry: <br><br>
+
+    {% encore_entry_js_files 'demo1' as js_files %}
+
+    <ul>
+    {% for file in js_files %}
+        <li>{{ file }}</li>
+    {% endfor %}
+    </ul>
+
+    <hr>
+
+    <h2>Demos</h2>
+
+    <h3>Font Awesome icons</h3>
+
+    <ul>
+        <li>
+            Brands: FB: <i class="fab fa-facebook-square"></i>
+        </li>
+        <li>
+            Solid Style: Envelope <i class="fas fa-envelope-open"></i>
+        </li>
+    </ul>
+
+    <h3>Bootstrap</h3>
+
+    <div class="alert alert-info">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, vero.
+    </div>
+
+{% endblock %}

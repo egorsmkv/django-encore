@@ -48,5 +48,14 @@ ENCORE_ENTRYPOINTS_FILE = os.path.join(BASE_DIR, 'assets_build') + '/build/entry
 
 See the **example** folder for more details.
 
+## Development
+
+First of all, install dependencies by pipenv:
+
+```
+pipenv install --dev
+pipenv shell # to shell with virtual environment
+```
+
 [1]: https://github.com/symfony/webpack-encore
 [2]: https://github.com/symfony/webpack-encore-bundle

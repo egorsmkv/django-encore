@@ -35,6 +35,8 @@ ENCORE_ENTRYPOINTS_FILE = os.path.join(BASE_DIR, 'assets_build') + '/build/entry
 3) Use template tags in your templates:
 
 ```text
+{% load encore %}
+
 {% block javascripts %}
     {{ block.super }}
     {% encore_entry_script_tags 'demo1' %}

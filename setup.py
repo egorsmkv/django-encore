@@ -10,7 +10,7 @@ setup(
     long_description=readme,
     long_description_content_type="text/markdown",
     license='MIT',
-    version='0.0.1',
+    version='0.0.2',
     url='https://github.com/egorsmkv/django-encore',
     project_urls={
         'Source': 'https://github.com/egorsmkv/django-encore',
@@ -20,7 +20,7 @@ setup(
     author_email='yehors@ukr.net',
     packages=find_packages(),
     install_requires=[
-        'Django>=2.1.5',
+        'Django>=2.2.18',
     ],
     python_requires='>=3',
     keywords='django django-encore webpack-encore',

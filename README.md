@@ -55,8 +55,22 @@ See the **example** folder for more details.
 First of all, install dependencies by pipenv:
 
 ```
+cd example/webapp
+
 pipenv install --dev
 pipenv shell # to shell with virtual environment
+```
+
+Second, build files using Encore:
+
+```
+npm run dev
+```
+
+Then you can start the web server:
+
+```
+python manage.py runserver
 ```
 
 [1]: https://github.com/symfony/webpack-encore

@@ -5,4 +5,4 @@ verify_ssl = true
 
 [packages]
 django-encore = "==0.0.2"
-Django = "==2.2.21"
+Django = "==2.2.22"
